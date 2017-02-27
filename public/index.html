@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
+    <title>Weather Chat</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="page-header">
+                <h1>Weather chat</h1>
+            </div>
+            <div class="header">
+            </div>
+            <form class="city-form">
+                <div class="form-group">
+                    <input type="text" class="form-control city-name" placeholder="Enter City">
+                    </input>
+                </div>
+                <button class="btn btn-primary temp" type="button">Get Temperature</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="cities">
+            </div>
+        </div>
+    </div>
+    <script id="cities-template" type="text/x-handlebars-template">
+        <div>
+            <h3> <strong>{{city}}</strong> <button type="button" class="remove"><i class="fa fa-trash-o" ></i></button></h3>
+            <strong><span> {{celsius}} </span> °C / <span> {{fahrenheit}} </span> °F </strong> at <span> {{datetime}} </span>
+            <div class="comments">
+            </div>
+            <input type="text" class="form-control text-comment" placeholder="Comment about the weather in {{city}}">
+            <button class="btn btn-success comment" type="button">Comment</button>
+            </input>
+        </div>
+    </script>
+    <script src=" script.js "></script>
+</body>
+
+</html>
